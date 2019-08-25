@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/burning-ghoul-1.png-4374b478b1f92b4f85381f97ec0948cd.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://MyAssets/Enviroment/Gothicvania Church/SPRITES/burning-ghoul/sprites/v1/burning-ghoul-1.png"
+dest_files=[ "res://.import/burning-ghoul-1.png-4374b478b1f92b4f85381f97ec0948cd.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

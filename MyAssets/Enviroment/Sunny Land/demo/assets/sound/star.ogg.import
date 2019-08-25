@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/star.ogg-6bd6eb2734cdb629c5cf16efb53c8ddd.oggstr"
+
+[deps]
+
+source_file="res://MyAssets/Enviroment/Sunny Land/demo/assets/sound/star.ogg"
+dest_files=[ "res://.import/star.ogg-6bd6eb2734cdb629c5cf16efb53c8ddd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

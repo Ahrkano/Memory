@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fantozzi-StoneR1.ogg-6448fd02fbeedb20e3b75bc94aa30f61.oggstr"
+
+[deps]
+
+source_file="res://MySounds/SooundFX/Footsteps/Fantozzi-StoneR1.ogg"
+dest_files=[ "res://.import/Fantozzi-StoneR1.ogg-6448fd02fbeedb20e3b75bc94aa30f61.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
