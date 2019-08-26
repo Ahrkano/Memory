@@ -7,6 +7,12 @@ var crouching = false
 export var speedX = 100
 export var jumpforce = -300
 export var gravity = 9.8
+
+var coins = 0
+
+func CoinGrabbed(value):
+	coins += value
+	$coin_collected.play()
 	
 		
 func _process(delta):
@@ -65,5 +71,4 @@ func _process(delta):
 		$Footstep_grass.stop()
 		
 	move = move_and_slide(move,UP)
-
 
