@@ -5,6 +5,7 @@ var move = Vector2()
 var crouching = false
 var ladder_on = false
 
+
 export var speedX = 100
 export var jumpforce = -300
 export var gravity = 9.8
@@ -31,7 +32,11 @@ func _process(delta):
 					$AnimatedSprite.animation = "Slide"
 					$Footstep_grass.stop()
 					crouching = false
+					$CollisionShape2D.set_disabled(true)
+					$CollisionShape2D2.set_disabled(false)
 				else:
+					$CollisionShape2D.set_disabled(false)
+					$CollisionShape2D2.set_disabled(true)
 					$AnimatedSprite.animation = "Run"
 					if not $Footstep_grass.is_playing():
 	                	$Footstep_grass.play()
@@ -44,7 +49,11 @@ func _process(delta):
 					$AnimatedSprite.animation = "Slide"
 					$Footstep_grass.stop()
 					crouching = false
+					$CollisionShape2D.set_disabled(true)
+					$CollisionShape2D2.set_disabled(false)
 				else:
+					$CollisionShape2D.set_disabled(false)
+					$CollisionShape2D2.set_disabled(true)
 					$AnimatedSprite.animation = "Run"
 					if not $Footstep_grass.is_playing():
 	                	$Footstep_grass.play()
@@ -69,6 +78,7 @@ func _process(delta):
 	#	JUMP (LEAVING GROUND)		
 		elif Input.is_action_pressed("ui_up"):
 			move.y = jumpforce
+			$Jump.play()
 
 	else:
 	#	CLIMB	
