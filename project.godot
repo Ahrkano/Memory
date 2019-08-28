@@ -19,6 +19,10 @@ config/name="Memory"
 run/main_scene="res://MyScenes/Level 01.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://MyScenes/Globals/global.gd"
+
 [display]
 
 window/size/width=1280
