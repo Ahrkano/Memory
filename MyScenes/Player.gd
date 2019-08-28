@@ -27,6 +27,7 @@ func die():
 	global.lives -= 1
 	get_node("../CanvasLayer").update_health(global.lives)
 	
+# warning-ignore:unused_argument
 func _process(delta):
 	
 	move.y += gravity 
