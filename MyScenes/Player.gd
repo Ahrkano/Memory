@@ -10,26 +10,26 @@ export var speedX = 100
 export var jumpforce = -300
 export var gravity = 9.8
 
+
 func CoinGrabbed(value):
 	global.coins += value
 	$coin_collected.play()
-	get_node("../CanvasLayer").update_score(global.coins)
-	get_node("../CanvasLayer").say_hi()
-
-func live():
-	if global.coins == 100:
+	$CanvasLayer.update_score(global.coins)
+	#ganha uma vida
+	if global.coins >= 1000:
 		global.lives += 1
-		get_node("../CanvasLayer").update_health(global.lives)
-		global.coins = 0
-		get_node("../CanvasLayer").update_score(global.coins)
+		$CanvasLayer.update_heart(global.lives)
+		
+func HeartGrabbed():
+		global.lives += 1
+		$CanvasLayer.update_heart(global.lives)
 
 func die():
 	global.lives -= 1
-	get_node("../CanvasLayer").update_health(global.lives)
+	$CanvasLayer.update_heart(global.lives)
 	
 # warning-ignore:unused_argument
 func _process(delta):
-	
 	move.y += gravity 
 	
 	$AnimatedSprite.playing = true

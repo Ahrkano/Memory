@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Area2D.gd" type="Script" id=1]
+[ext_resource path="res://MyScenes/Items/Coin.gd" type="Script" id=1]
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1011.png" type="Texture" id=2]
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1012.png" type="Texture" id=3]
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1013.png" type="Texture" id=4]
@@ -19,10 +19,11 @@ radius = 40.0
 
 [node name="Coin" type="Area2D"]
 script = ExtResource( 1 )
+value = 10
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

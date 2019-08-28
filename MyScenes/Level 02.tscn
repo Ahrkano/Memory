@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://MyScenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MyScenes/Tilesets/Sunny_Land.tres" type="TileSet" id=2]
+[ext_resource path="res://MyScenes/Items/Coin.tscn" type="PackedScene" id=3]
 
 [node name="Level 02" type="Node2D"]
 
@@ -9,6 +10,7 @@
 position = Vector2( 50.02, 312.746 )
 
 [node name="TileMap" type="TileMap" parent="."]
+editor/display_folded = true
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
@@ -21,3 +23,18 @@ polygon = PoolVector2Array( 128.21, 511.51, 143.998, 511.52, 144.487, 559.511, 1
 
 [node name="Plat_1" type="CollisionPolygon2D" parent="TileMap/StaticBody2D"]
 polygon = PoolVector2Array( -45.6127, 278.858, 1.67157, 278.946, 0.626678, 576.29, 79.8927, 576.223, 79.8927, 592.068, 191.69, 591.495, 192.072, 607.721, 239.658, 607.59, 239.658, 623.138, 271.574, 623.302, 271.901, 640.16, 303.162, 640.16, 303.279, 655.404, 399.568, 656.39, 399.79, 671.53, 479.345, 672.198, 479.568, 688.452, 559.277, 687.561, 559.784, 655.945, 656.192, 655.945, 655.812, 624.044, 720.732, 623.341, 720.732, 592.405, 768.075, 591.701, 768.075, 687.758, 832.192, 688.227, 831.723, 671.994, 848.12, 672.127, 848.12, 639.733, 879.848, 639.733, 880.114, 719.773, 0, 720, -46.6899, 721.112 )
+
+[node name="Items" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Coin" parent="Items" instance=ExtResource( 3 )]
+position = Vector2( 160.004, 574.682 )
+scale = Vector2( 0.217, 0.217 )
+
+[node name="Coin2" parent="Items" instance=ExtResource( 3 )]
+position = Vector2( 214.334, 586.096 )
+scale = Vector2( 0.217, 0.217 )
+
+[node name="Coin3" parent="Items" instance=ExtResource( 3 )]
+position = Vector2( 258.62, 600.249 )
+scale = Vector2( 0.217, 0.217 )
