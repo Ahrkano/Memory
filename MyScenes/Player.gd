@@ -10,14 +10,25 @@ export var speedX = 100
 export var jumpforce = -300
 export var gravity = 9.8
 
-var coins = 0
-
 func CoinGrabbed(value):
-	coins += value
+	global.coins += value
 	$coin_collected.play()
+	get_node("../CanvasLayer").update_score(global.coins)
+	get_node("../CanvasLayer").say_hi()
+
+func live():
+	if global.coins == 100:
+		global.lives += 1
+		get_node("../CanvasLayer").update_health(global.lives)
+		global.coins = 0
+		get_node("../CanvasLayer").update_score(global.coins)
+
+func die():
+	global.lives -= 1
+	get_node("../CanvasLayer").update_health(global.lives)
 	
-		
 func _process(delta):
+	
 	move.y += gravity 
 	
 	$AnimatedSprite.playing = true
