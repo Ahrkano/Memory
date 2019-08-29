@@ -149,6 +149,7 @@ shape = SubResource( 3 )
 [node name="Player" parent="." instance=ExtResource( 10 )]
 
 [node name="Background_sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 854.386, 306.117 )
 stream = ExtResource( 11 )
 autoplay = true
 
@@ -169,6 +170,7 @@ position = Vector2( 1251.96, 811.404 )
 shape = SubResource( 6 )
 
 [node name="Items" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Gold_Coin" parent="Items" instance=ExtResource( 13 )]
 position = Vector2( 486.256, 449.651 )
