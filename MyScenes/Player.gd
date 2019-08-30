@@ -4,6 +4,7 @@ const UP = Vector2(0,-1)
 var move = Vector2()
 var crouching = false
 var ladder_on = false
+var respawn = Vector2(0,0)
 
 
 export var speedX = 100
@@ -27,6 +28,7 @@ func HeartGrabbed():
 func die():
 	global.lives -= 1
 	$CanvasLayer.update_heart(global.lives)
+	to_global (respawn)
 	
 # warning-ignore:unused_argument
 func _process(delta):
@@ -97,6 +99,7 @@ func _process(delta):
 		if ladder_on :
 			$AnimatedSprite.animation = "Climb"
 			gravity = 0
+			move.x = 0
 			
 			if Input.is_action_pressed("ui_up"):
 				move.y = -speedX

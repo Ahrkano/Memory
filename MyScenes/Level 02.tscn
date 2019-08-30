@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MyScenes/Tilesets/Sunny_Land.tres" type="TileSet" id=1]
 [ext_resource path="res://MyScenes/Tilesets/Castle_BG.tres" type="TileSet" id=2]
@@ -9,24 +9,28 @@
 [ext_resource path="res://MyScenes/Items/Coin_2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://MyScenes/Danger_zones.gd" type="Script" id=8]
 [ext_resource path="res://MyScenes/Next_Level_2.gd" type="Script" id=9]
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 15.9609, 15.8672 )
+[ext_resource path="res://MyScenes/Respawn.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33.2604, 10 )
+extents = Vector2( 15.9609, 15.8672 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 335.827, 10.8759 )
+extents = Vector2( 33.2604, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 207.798, 11.2693 )
+extents = Vector2( 335.827, 10.8759 )
 
 [sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 207.798, 11.2693 )
+
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 66.761, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 11.981, 91.8231 )
+
+[sub_resource type="LineShape2D" id=7]
+d = 3.53691
 
 [node name="Level 02" type="Node2D"]
 
@@ -98,13 +102,14 @@ polygon = PoolVector2Array( 1135.83, 591.597, 1136.08, 624.902, 1360, 624.409, 1
 
 [node name="Float_Box_1" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
 position = Vector2( 1007.63, 592.603 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="Float_Box_2" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
 position = Vector2( 1071.59, 591.859 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 50.02, 312.746 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -231,19 +236,19 @@ script = ExtResource( 8 )
 
 [node name="Pit_1" type="CollisionShape2D" parent="Danger_zones"]
 position = Vector2( 458.39, 725.031 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Pit_2" type="CollisionShape2D" parent="Danger_zones"]
 position = Vector2( 1156.47, 957.827 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Pit_3" type="CollisionShape2D" parent="Danger_zones"]
 position = Vector2( 1795.02, 987.013 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Pit_4" type="CollisionShape2D" parent="Danger_zones"]
 position = Vector2( 2417.83, 797.974 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Next_Level" type="Area2D" parent="."]
 editor/display_folded = true
@@ -252,5 +257,14 @@ script = ExtResource( 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Next_Level"]
 position = Vector2( 2695.62, 480.902 )
 shape = SubResource( 6 )
+
+[node name="Respawn" type="Area2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Respawn"]
+position = Vector2( 73.9658, 372.116 )
+shape = SubResource( 7 )
 [connection signal="body_entered" from="Danger_zones" to="Danger_zones" method="_on_Danger_zones_body_entered"]
 [connection signal="body_entered" from="Next_Level" to="Next_Level" method="_on_Next_Level_body_entered"]
+[connection signal="body_entered" from="Respawn" to="Respawn" method="_on_Respawn_body_entered"]
