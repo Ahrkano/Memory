@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BlackedBit - Zona Eter- REBOOT - 07 Amnesia corpse (Lost Memories).ogg-9f004b687beb0d46f877689532724d18.oggstr"
+
+[deps]
+
+source_file="res://MySounds/Soundtracks/BlackedBit - Zona Eter- REBOOT - 07 Amnesia corpse (Lost Memories).ogg"
+dest_files=[ "res://.import/BlackedBit - Zona Eter- REBOOT - 07 Amnesia corpse (Lost Memories).ogg-9f004b687beb0d46f877689532724d18.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

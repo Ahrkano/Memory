@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MyScenes/Danger_zones.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 4.17285 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 160, 5.27179 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 60, 5.63947 )
+
+[node name="Danger_zones" type="Area2D"]
+editor/display_folded = true
+script = ExtResource( 1 )
+
+[node name="Pit_1" type="CollisionShape2D" parent="."]
+position = Vector2( 485.425, 685.448 )
+shape = SubResource( 2 )
+
+[node name="Pit_2" type="CollisionShape2D" parent="."]
+position = Vector2( 1019.2, 706.932 )
+shape = SubResource( 3 )
+
+[node name="Pit_3" type="CollisionShape2D" parent="."]
+position = Vector2( 1243.73, 706.073 )
+shape = SubResource( 4 )
+[connection signal="body_entered" from="." to="." method="_on_Danger_zones_body_entered"]
