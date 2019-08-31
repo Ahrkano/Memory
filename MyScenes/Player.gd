@@ -26,14 +26,16 @@ func HeartGrabbed():
 		$CanvasLayer.update_heart(global.lives)
 
 func die():
+	$Hurt.play()
 	global.lives -= 1
 	$CanvasLayer.update_heart(global.lives)
-	to_global (respawn)
+	yield(get_tree().create_timer(0.2), "timeout")
+	set_position(respawn)
+	#TODO add death song
 	
 # warning-ignore:unused_argument
 func _process(delta):
 	move.y += gravity 
-	
 	$AnimatedSprite.playing = true
 	
 	if not ladder_on :
