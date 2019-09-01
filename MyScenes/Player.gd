@@ -4,6 +4,7 @@ const UP = Vector2(0,-1)
 var move = Vector2()
 var crouching = false
 var ladder_on = false
+var respawn = Vector2(0,0)
 
 
 export var speedX = 100
@@ -25,13 +26,16 @@ func HeartGrabbed():
 		$CanvasLayer.update_heart(global.lives)
 
 func die():
+	$Hurt.play()
 	global.lives -= 1
 	$CanvasLayer.update_heart(global.lives)
+	yield(get_tree().create_timer(0.2), "timeout")
+	set_position(respawn)
+	#TODO add death song
 	
 # warning-ignore:unused_argument
 func _process(delta):
 	move.y += gravity 
-	
 	$AnimatedSprite.playing = true
 	
 	if not ladder_on :
@@ -97,6 +101,7 @@ func _process(delta):
 		if ladder_on :
 			$AnimatedSprite.animation = "Climb"
 			gravity = 0
+			move.x = 0
 			
 			if Input.is_action_pressed("ui_up"):
 				move.y = -speedX

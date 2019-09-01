@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Memoraphile - Spooky Dungeon.ogg-540f63758b93ddce5751d3b9f8c0bead.oggstr"
+
+[deps]
+
+source_file="res://MySounds/Soundtracks/Memoraphile - Spooky Dungeon.ogg"
+dest_files=[ "res://.import/Memoraphile - Spooky Dungeon.ogg-540f63758b93ddce5751d3b9f8c0bead.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

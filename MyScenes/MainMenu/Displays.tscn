@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MyScenes/MainMenu/CanvasLayer.gd" type="Script" id=1]
 [ext_resource path="res://MyAssets/TTF/joystix monospace.ttf" type="DynamicFontData" id=2]
@@ -6,14 +6,29 @@
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1012.png" type="Texture" id=4]
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1013.png" type="Texture" id=5]
 [ext_resource path="res://MyAssets/Items/Coins_kvsr/C1014.png" type="Texture" id=6]
+[ext_resource path="res://MyAssets/Items/HP/tile000.png" type="Texture" id=7]
+[ext_resource path="res://MyAssets/Items/HP/tile001.png" type="Texture" id=8]
+[ext_resource path="res://MyAssets/Items/HP/tile002.png" type="Texture" id=9]
+[ext_resource path="res://MyAssets/Items/HP/tile003.png" type="Texture" id=10]
+[ext_resource path="res://MyAssets/Items/HP/tile004.png" type="Texture" id=11]
+[ext_resource path="res://MyAssets/Items/HP/tile005.png" type="Texture" id=12]
+[ext_resource path="res://MyAssets/Items/HP/tile006.png" type="Texture" id=13]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -46,14 +61,14 @@ alignment = 2
 margin_left = 1213.0
 margin_right = 1240.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 
 [node name="gold" type="AnimatedSprite" parent="ScoreBox/HBoxContainer"]
 position = Vector2( 1120, 20 )
 scale = Vector2( 0.349, 0.349 )
-frames = SubResource( 3 )
-frame = 1
+frames = SubResource( 2 )
+frame = 3
 playing = true
 
 [node name="HeartBox" type="MarginContainer" parent="."]
@@ -73,10 +88,12 @@ margin_bottom = 59.0
 [node name="Health" type="Label" parent="HeartBox/HBoxContainer"]
 margin_right = 27.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "3"
 
-[node name="heart" type="Sprite" parent="HeartBox/HBoxContainer"]
+[node name="heart" type="AnimatedSprite" parent="HeartBox/HBoxContainer"]
 position = Vector2( -48.097, 19.3116 )
-scale = Vector2( 0.349137, 0.349137 )
-texture = ExtResource( 3 )
+scale = Vector2( 1.86404, 1.86404 )
+frames = SubResource( 3 )
+frame = 1
+playing = true

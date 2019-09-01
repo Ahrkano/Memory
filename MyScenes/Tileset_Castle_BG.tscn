@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MyAssets/Enviroment/Gothicvania Church/ENVIRONMENT/backgrounds.png" type="Texture" id=1]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="BG 1" type="Sprite" parent="TileMap"]
+position = Vector2( 95.6913, 107.516 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 192 )
+
+[node name="BG 2" type="Sprite" parent="TileMap"]
+position = Vector2( 259.461, 108.478 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 176, 0, 128, 192 )
+
+[node name="BG 3" type="Sprite" parent="TileMap"]
+position = Vector2( 410.435, 110.398 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 128, 192 )
+
+[node name="BG 4" type="Sprite" parent="TileMap"]
+position = Vector2( 531.797, 109.071 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 480, 96, 64, 64 )
+
+[node name="BG 5" type="Sprite" parent="TileMap"]
+position = Vector2( 625.699, 111.036 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 560, 0, 64, 192 )
+
+[node name="Shadow" type="Sprite" parent="TileMap"]
+position = Vector2( 686.579, 34.4672 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )

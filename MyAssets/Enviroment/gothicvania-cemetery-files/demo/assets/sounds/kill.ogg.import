@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kill.ogg-30ba1fc12d8204c5cc3363643017af25.oggstr"
+
+[deps]
+
+source_file="res://MyAssets/Enviroment/gothicvania-cemetery-files/demo/assets/sounds/kill.ogg"
+dest_files=[ "res://.import/kill.ogg-30ba1fc12d8204c5cc3363643017af25.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
