@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/newgame_b.png-a9a5005ae9465c1129638a684c3f9171.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://MyAssets/GUI/newgame_b.png"
+dest_files=[ "res://.import/newgame_b.png-a9a5005ae9465c1129638a684c3f9171.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

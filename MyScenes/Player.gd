@@ -26,13 +26,15 @@ func HeartGrabbed():
 		$CanvasLayer.update_heart(global.lives)
 
 func die():
-	$Hurt.play()
-	global.lives -= 1
-	$CanvasLayer.update_heart(global.lives)
-	yield(get_tree().create_timer(0.2), "timeout")
-	set_position(respawn)
-	#TODO add death song
-	
+	if global.lives == 0:
+		get_tree().change_scene("res://MyScenes/MainMenu/GameOver.tscn")
+	else:
+		$Hurt.play()
+		global.lives -= 1
+		$CanvasLayer.update_heart(global.lives)
+		yield(get_tree().create_timer(0.2), "timeout")
+		set_position(respawn)
+
 # warning-ignore:unused_argument
 func _process(delta):
 	move.y += gravity 
