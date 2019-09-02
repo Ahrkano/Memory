@@ -176,6 +176,7 @@ position = Vector2( 1824.94, 470.377 )
 scale = Vector2( 0.217, 0.217 )
 
 [node name="Areas" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Danger_zones" parent="Areas" instance=ExtResource( 11 )]
 script = ExtResource( 12 )
