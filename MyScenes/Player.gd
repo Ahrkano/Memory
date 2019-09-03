@@ -37,7 +37,7 @@ func die():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	move.y += gravity 
+	move.y += gravity
 	$AnimatedSprite.playing = true
 	
 	if not ladder_on :
