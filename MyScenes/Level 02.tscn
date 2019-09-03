@@ -114,7 +114,6 @@ autoplay = true
 max_distance = 3000.0
 
 [node name="Items" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Coin" parent="Items" instance=ExtResource( 6 )]
 position = Vector2( 454.294, 552.016 )
